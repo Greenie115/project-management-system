@@ -9,7 +9,7 @@ function Sidebar (){
     return(
         <>
         <menu className="container ">
-            <div className="bg-zinc-900 max-w-80 h-screen mt-20 rounded-tr-3xl">
+            <div className="flex bg-zinc-900 max-w-80 h-screen mt-20 rounded-tr-3xl justify-center flex-col content-start">
                 <h2 className="text-white p-10">Your Projects</h2>
                 <Button 
                     content='Add New +'
