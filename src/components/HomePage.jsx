@@ -1,12 +1,18 @@
 import Container from "./Container";
-
+import LOGO from "../../public/logo.png"
 
 function HomePage() {
     return (
         <Container>
-            <h2>Home Page</h2>
-            <p>hello P</p>
-            <h2>another h2</h2>
+            <img
+                className="max-w-24 p-3 m-3"
+                src={LOGO}
+                alt="" />
+            <h2
+                className="text-xl m-1 p-2"
+            >Welcome to the project management dashboard.</h2>
+            <p>Fill in the details of your first project below</p>
+
         </Container>
     )
 };

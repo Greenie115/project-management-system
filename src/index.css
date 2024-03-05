@@ -4,10 +4,12 @@
 
 @layer base {
     *{
-        @apply font-mono
+        @apply font-mono;
+        
     }
+
     h1 {
-        @apply text-center
+        @apply text-center;
     }
     h2 {
         @apply text-center
