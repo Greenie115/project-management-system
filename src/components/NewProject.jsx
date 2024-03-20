@@ -1,4 +1,11 @@
+import Button from "./Button";
+
 function NewProject() {
+
+const submitProject = () => {
+    console.log("Project added")
+}
+
     return (
         <>
             <form className="m-1 p-1">
@@ -26,6 +33,10 @@ function NewProject() {
                 </label>
                 <input type="date" className="m-1 p-1" required/>
             </form>
+            <Button
+                content="Submit"
+                onClick={submitProject}
+            />
         </>
     )
 };
