@@ -1,10 +1,6 @@
 import Button from "./Button";
 
-function Sidebar (){
-
-    const handleClick = () => {
-        console.log('clicked')
-    }
+function Sidebar ({ handleClick }){
 
     return(
         <>
