@@ -3,7 +3,7 @@ import Button from "./Button";
 function NewProject() {
 
 const submitProject = () => {
-    console.log("Project added")
+    console.log(projectTitle)
 }
 
     return (
@@ -11,8 +11,8 @@ const submitProject = () => {
             <form className="m-1 p-1">
                 <label className="m-1 p-1">
                     Project Title
+                <input name='projectTitle' type="text" className="m-1 p-1" required/>
                 </label>
-                <input type="text" className="m-1 p-1" required/>
 
                 <label className="m-1 p-1">
                     Manager
