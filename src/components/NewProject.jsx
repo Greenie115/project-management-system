@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
+import Input from "./Input"
+import Container from "./Container";
 
 function NewProject() {
     const [newProject, setNewProject] = useState({
@@ -19,12 +21,12 @@ function NewProject() {
 
     const submitProject = event => {
         event.preventDefault();
-        console.log(newProject);
     }
 
     return (
+        <Container>
         <form onSubmit={submitProject} className="m-1 p-1">
-            <label className="m-1 p-1">
+            {/* <label className="m-1 p-1">
                 Project Title
                 <input
                     name='title'
@@ -33,9 +35,23 @@ function NewProject() {
                     value={newProject.title}
                     onChange={handleInputChange}
                     required
-                />
-            </label>
-            <label className="m-1 p-1">
+                /> */}
+                <Input 
+                    name='title'
+                    type='text'
+                    value={newProject.title}
+                    onChange={handleInputChange}>
+                        Project Title
+                </Input>
+                <Input 
+                    name='title'
+                    type='text'
+                    value={newProject.title}
+                    onChange={handleInputChange}>
+                        Project Title
+                </Input>
+            {/* </label> */}
+            {/* <label className="m-1 p-1">
                 Manager
                 <input
                     name='manager'
@@ -45,7 +61,7 @@ function NewProject() {
                     onChange={handleInputChange}
                     required
                 />
-            </label>
+            </label> */}
             <label className="m-1 p-1">
                 Project Description
                 <textarea
@@ -74,6 +90,7 @@ function NewProject() {
                 type="submit"
             />
         </form>
+        </Container>
     );
 }
 
