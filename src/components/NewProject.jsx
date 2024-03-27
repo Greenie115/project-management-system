@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input"
-import Container from "./Container";
 
 function NewProject() {
     const [newProject, setNewProject] = useState({
@@ -24,8 +23,8 @@ function NewProject() {
     }
 
     return (
-        <Container>
-        <form onSubmit={submitProject} className="m-1 p-1">
+        <section>
+        <form onSubmit={submitProject} className="m-60 p-1">
             {/* <label className="m-1 p-1">
                 Project Title
                 <input
@@ -85,12 +84,12 @@ function NewProject() {
                     required
                 />
             </label>
+        </form>
             <Button
                 content="Submit"
                 type="submit"
             />
-        </form>
-        </Container>
+        </section>
     );
 }
 
