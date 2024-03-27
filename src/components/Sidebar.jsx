@@ -1,7 +1,14 @@
+import { useState } from "react";
 import Button from "./Button";
 
-function Sidebar ({ handleClick }){
+function Sidebar (){
 
+    const [homeScreen, setHomeScreen] = useState(true)
+
+    const handleClick = () => {
+        setHomeScreen(false)
+    }
+    
     return(
         <>
         <aside className="container">

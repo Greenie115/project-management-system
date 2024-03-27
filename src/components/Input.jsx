@@ -1,17 +1,37 @@
-function Input({ name, type, value, handleInputChange, children}){
+function Input({ name, type, children, ...props}){
     return(
     <p>
-        <label className="m-1 p-1">
+        {props.textArea ?
+        <>
+        <label className="p-1">
             {children}
-        <input
+        </label>
+        <p>
+        <textarea
             name={name}
             type={type}
+            rows='4'
+            col='10'
             className="m-1 p-1"
-            value={value}
-            onChange={handleInputChange}
+            value={props.value}
+            onChange={props.onChange}
             required
-        />
-        </label>
+            /> 
+        </p>
+            </>       : 
+
+        <label className="p-1">
+            {children}
+        <input  
+            name={name}
+            type={type}
+            rows="4"
+            cols="50"
+            className="m-1 p-1"
+            value={props.value}
+            onChange={props.onChange}
+            required />
+        </label> }
      </p>
     )
 };

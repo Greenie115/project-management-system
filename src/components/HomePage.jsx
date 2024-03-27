@@ -1,22 +1,10 @@
-import { useState } from "react";
 import Container from "./Container";
 import LOGO from "../../public/logo.png"
 import NewProject from "./NewProject";
-import Sidebar from "./Sidebar";
-
 
 function HomePage() {
-
-    const [homeScreen, setHomeScreen] = useState(true)
-
-    const handleClick = () => {
-        setHomeScreen(false)
-    }
-
     return (
         <>
-            <Sidebar
-                handleClick={handleClick} />
             <Container>
                 {homeScreen ?
                     <>

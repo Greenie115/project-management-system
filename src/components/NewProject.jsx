@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input"
+import Container from "./Container";
 
 function NewProject() {
     const [newProject, setNewProject] = useState({
@@ -23,18 +24,8 @@ function NewProject() {
     }
 
     return (
-        <section>
-        <form onSubmit={submitProject} className="m-60 p-1">
-            {/* <label className="m-1 p-1">
-                Project Title
-                <input
-                    name='title'
-                    type="text"
-                    className="m-1 p-1"
-                    value={newProject.title}
-                    onChange={handleInputChange}
-                    required
-                /> */}
+        <Container>
+        <form onSubmit={submitProject} className="p-1">
                 <Input 
                     name='title'
                     type='text'
@@ -43,53 +34,34 @@ function NewProject() {
                         Project Title
                 </Input>
                 <Input 
-                    name='title'
-                    type='text'
-                    value={newProject.title}
-                    onChange={handleInputChange}>
-                        Project Title
-                </Input>
-            {/* </label> */}
-            {/* <label className="m-1 p-1">
-                Manager
-                <input
                     name='manager'
-                    type="text"
-                    className="m-1 p-1"
+                    type='text'
                     value={newProject.manager}
-                    onChange={handleInputChange}
-                    required
-                />
-            </label> */}
-            <label className="m-1 p-1">
-                Project Description
-                <textarea
+                    onChange={handleInputChange}>
+                        Manager
+                </Input>
+                <Input 
                     name='description'
-                    rows="4"
-                    cols="50"
-                    className="m-1 p-1"
+                    type='text'
                     value={newProject.description}
                     onChange={handleInputChange}
-                    required
-                />
-            </label>
-            <label className="m-1 p-1">
-                Due Date
-                <input
-                    name='date'
-                    type="date"
-                    className="m-1 p-1"
+                    textArea >
+                        Project Description
+                </Input>
+                <Input 
+                    name='due-date'
+                    type='date'
                     value={newProject.date}
                     onChange={handleInputChange}
-                    required
-                />
-            </label>
+                    >
+                        Due Date 
+                </Input>
         </form>
             <Button
                 content="Submit"
                 type="submit"
             />
-        </section>
+    </Container>
     );
 }
 
