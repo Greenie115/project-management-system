@@ -7,13 +7,13 @@ function HomePage() {
 
 
     return (
-        <>      
-        <Sidebar />
+        <>
+            <Sidebar />
             <Container>
-            <NewProject/>
+                <NewProject />
             </Container>
         </>
-    )
+            )
 };
 
-export default HomePage;
+            export default HomePage;

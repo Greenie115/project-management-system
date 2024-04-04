@@ -17,7 +17,7 @@ function Sidebar (){
     return(
         <>
         <aside className="container">
-            <ul className="flex bg-zinc-900 max-w-80 w-1/5 h-screen mt-20 rounded-tr-3xl flex-col md:w-72">
+            <ul className="flex bg-zinc-900 max-w-80 h-screen mt-20 rounded-tr-3xl flex-col md:w-72">
                 <li>
                 <h2 className="text-white p-10">Your Projects</h2>
                 </li>

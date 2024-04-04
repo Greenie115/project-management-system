@@ -1,7 +1,6 @@
 import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input"
-import Container from "./Container";
 
 function NewProject() {
     const [newProject, setNewProject] = useState({
@@ -24,47 +23,47 @@ function NewProject() {
     }
 
     return (
-        <Container>
-        <form onSubmit={submitProject} className="p-1">
-                <Input 
+        <div className="w-[35-rem] mt-16"> 
+            <form onSubmit={submitProject} className="flex item-center justify-end gap-4 my-4 flex-col">
+                <Input
                     name='title'
                     type='text'
                     value={newProject.title}
                     onChange={handleInputChange}>
-                        Project Title
+                    Project Title
                 </Input>
-                <Input 
+                <Input
                     name='manager'
                     type='text'
                     value={newProject.manager}
                     onChange={handleInputChange}>
-                        Manager
+                    Manager
                 </Input>
-                <Input 
+                <Input
                     name='description'
                     type='text'
                     value={newProject.description}
                     onChange={handleInputChange}
                     textArea >
-                        Project Description
+                    Project Description
                 </Input>
-                <Input 
+                <Input
                     name='due-date'
                     type='date'
                     value={newProject.date}
                     onChange={handleInputChange}
-                    >
-                        Due Date 
+                >
+                    Due Date
                 </Input>
-            <Button
-                content="Submit"
-                type="submit"
-            />
-            <Button
-                content='Cancel'
-                type='click'/>
-        </form>
-    </Container>
+            </form>
+                <Button
+                    content="Submit"
+                    type="submit"
+                />
+                <Button
+                    content='Cancel'
+                    type='click' />
+        </div>
     );
 }
 
