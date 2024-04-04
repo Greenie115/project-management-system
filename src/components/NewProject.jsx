@@ -56,11 +56,14 @@ function NewProject() {
                     >
                         Due Date 
                 </Input>
-        </form>
             <Button
                 content="Submit"
                 type="submit"
             />
+            <Button
+                content='Cancel'
+                type='click'/>
+        </form>
     </Container>
     );
 }

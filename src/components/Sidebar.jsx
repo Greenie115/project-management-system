@@ -1,14 +1,19 @@
 import { useState } from "react";
 import Button from "./Button";
+import NewProject from "./NewProject";
 
 function Sidebar (){
 
-    const [homeScreen, setHomeScreen] = useState(true)
+    const [newProject, setNewProject] = useState(true)
 
     const handleClick = () => {
-        setHomeScreen(false)
+        setNewProject(false)
+        if (newProject){
+            return <NewProject/>
+        } else {
+            return null
+        }
     }
-    
     return(
         <>
         <aside className="container">
@@ -20,7 +25,8 @@ function Sidebar (){
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <Button 
                         content='Add New +'
-                        onClick={handleClick}/>
+                        onClick={handleClick}
+                        />
                 </div>
                 </li>
             </ul>
