@@ -1,6 +1,7 @@
 import Container from "./Container";
 import NewProject from "./NewProject";
 import Sidebar from "./Sidebar";
+import WelcomeScreen from "./WelcomeScreen";
 
 function HomePage() {
 
@@ -10,7 +11,7 @@ function HomePage() {
         <>
             <Sidebar />
             <Container>
-                <NewProject />
+                <WelcomeScreen/>
             </Container>
         </>
             )

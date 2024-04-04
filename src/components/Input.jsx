@@ -12,7 +12,7 @@ function Input({ name, type, children, ...props}){
             type={type}
             rows='4'
             col='10'
-            className="m-1 p-1"
+            className="m-1 p-1 w-full"
             value={props.value}
             onChange={props.onChange}
             required
