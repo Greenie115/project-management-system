@@ -1,7 +1,7 @@
 import Button from "./Button";
 import LOGO from "../assets/no-projects.png"
 
-function WelcomeScreen() {
+function WelcomeScreen({ onStart }) {
     return (
         <>
             <img src={LOGO} alt="Blank project clipboard"
@@ -14,6 +14,7 @@ function WelcomeScreen() {
             </p>
             <Button
                 content='+ Create New Project'
+                onClick={onStart}
             />
         </>
     )

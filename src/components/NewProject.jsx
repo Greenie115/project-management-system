@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input"
 
-function NewProject() {
+function NewProject({ onStart }) {
     const [newProject, setNewProject] = useState({
         title: '',
         manager: '',
@@ -62,7 +62,8 @@ function NewProject() {
                 />
                 <Button
                     content='Cancel'
-                    type='click' />
+                    type='click'
+                     />
         </div>
     );
 }

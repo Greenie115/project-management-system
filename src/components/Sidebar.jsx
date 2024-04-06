@@ -2,7 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 import NewProject from "./NewProject";
 
-function Sidebar (){
+function Sidebar ({ onStart }){
 
     const [newProject, setNewProject] = useState(true)
 
@@ -25,7 +25,7 @@ function Sidebar (){
                 <div className="flex-grow flex flex-col justify-center items-center">
                     <Button 
                         content='Add New +'
-                        onClick={handleClick}
+                        onClick={onStart}
                         />
                 </div>
                 </li>
