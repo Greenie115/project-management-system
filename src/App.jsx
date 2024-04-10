@@ -1,6 +1,4 @@
 import HomePage from "./components/HomePage";
-import Sidebar from "./components/Sidebar";
-import Container from "./components/Container";
 
 function App() {
   return (

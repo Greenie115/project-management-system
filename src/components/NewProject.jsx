@@ -1,3 +1,4 @@
+import { useRef } from "react";
 import { useState } from "react";
 import Button from "./Button";
 import Input from "./Input"
@@ -21,6 +22,11 @@ function NewProject({ onStart }) {
     const submitProject = event => {
         event.preventDefault();
     }
+
+    const title = useRef();
+    const manager = useRef();
+    const description = useRef();
+    const dueDate = useRef();
 
     return (
         <div className="w-[35-rem] mt-16"> 
