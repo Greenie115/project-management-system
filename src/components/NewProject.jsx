@@ -28,25 +28,32 @@ function NewProject({ onStart }) {
     const description = useRef();
     const dueDate = useRef();
 
+    function handleSave () {
+        const enteredTitle = title.current.value
+        const enteredManager = manager.current.value
+        const enteredDescription = description.current.value
+        const enteredDueDate = dueDate.current.value
+    }
+
     return (
         <div className="w-[35-rem] mt-16"> 
             <form onSubmit={submitProject} className="flex item-center justify-end gap-4 my-4 flex-col">
                 <Input
-                    name='title'
+                    ref={title}
                     type='text'
                     value={newProject.title}
                     onChange={handleInputChange}>
                     Project Title
                 </Input>
                 <Input
-                    name='manager'
+                    ref={manager}
                     type='text'
                     value={newProject.manager}
                     onChange={handleInputChange}>
                     Manager
                 </Input>
                 <Input
-                    name='description'
+                    ref={description}
                     type='text'
                     value={newProject.description}
                     onChange={handleInputChange}
@@ -54,7 +61,7 @@ function NewProject({ onStart }) {
                     Project Description
                 </Input>
                 <Input
-                    name='due-date'
+                    ref={dueDate}
                     type='date'
                     value={newProject.date}
                     onChange={handleInputChange}
@@ -63,7 +70,8 @@ function NewProject({ onStart }) {
                 </Input>
             </form>
                 <Button
-                    content="Submit"
+                    onClick={handleSave}
+                    content="Save"
                     type="submit"
                 />
                 <Button
